@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Radaza - Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full bg-white/20 backdrop-blur-md border-b border-white/10 z-40 shadow-lg transition-all duration-300">
+        <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+            <div class="font-bold text-xl text-blue-900">AJ Radaza</div>
+            <ul class="hidden md:flex gap-8 font-medium" id="nav-links">
+                <li><a href="#home" class="hover:text-blue-500 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-500 transition">About</a></li>
+                <li class="relative">
+                    <button type="button" class="services-dropdown-toggle flex items-center hover:text-blue-500 transition focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                        Services & Portfolio <svg class="ml-1 w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="services-dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded shadow-lg hidden z-50">
+                        <a href="pages/video-editing.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Video Editing</a>
+                        <a href="pages/photo-editing.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Photo Editing</a>
+                        <a href="pages/audio-music.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Audio & Music</a>
+                        <a href="pages/web-development.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Web Development</a>
+                        <a href="pages/app-development.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">App Development</a>
+                        <a href="pages/python-automation.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Python Automation</a>
+                    </div>
+                </li>
+                <li><a href="#contact" class="hover:text-blue-500 transition">Contact</a></li>
+            </ul>
+            <div class="md:hidden flex flex-col gap-1 cursor-pointer" id="hamburger">
+                <span class="block w-7 h-1 bg-blue-900 rounded"></span>
+                <span class="block w-7 h-1 bg-blue-900 rounded"></span>
+                <span class="block w-7 h-1 bg-blue-900 rounded"></span>
+            </div>
+        </div>
+        <ul class="md:hidden hidden flex-col gap-4 px-6 pb-4 shadow-lg" id="mobile-menu">
+            <li><a href="#home" class="block py-2">Home</a></li>
+            <li><a href="#about" class="block py-2">About</a></li>
+            <li class="relative">
+                <button type="button" class="services-dropdown-toggle flex items-center w-full text-left py-2 focus:outline-none" aria-expanded="false">
+                    Services & Portfolio <svg class="ml-1 w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="services-dropdown-menu hidden bg-white/80 rounded shadow-lg mt-1 z-50">
+                    <a href="pages/video-editing.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Video Editing</a>
+                    <a href="pages/photo-editing.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Photo Editing</a>
+                    <a href="pages/audio-music.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Audio & Music</a>
+                    <a href="pages/web-development.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Web Development</a>
+                    <a href="pages/app-development.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">App Development</a>
+                    <a href="pages/python-automation.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Python Automation</a>
+                </div>
+            </li>
+            <li><a href="#contact" class="block py-2">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex flex-col items-center justify-center min-h-screen pt-20 pb-16 bg-gradient-to-br from-blue-700 to-purple-900 text-white text-center relative overflow-hidden">
+        <canvas class="lava-lamp-bg absolute inset-0 w-full h-full z-0 pointer-events-none"></canvas>
+        
+        <!-- Main Hero Content -->
+        <div class="max-w-4xl mx-auto relative z-10 px-4">
+            <!-- Profile Image with Enhanced Styling -->
+            <div class="flex justify-center mb-8">
+                <div class="relative">
+                    <img src="images/profile.jpg" alt="AJ Radaza" class="w-48 h-48 rounded-full object-cover border-4 border-white shadow-2xl">
+                    <!-- Decorative ring -->
+                    <div class="absolute inset-0 rounded-full border-4 border-white/30 animate-pulse"></div>
+                </div>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg">Hi, I'm AJ Radaza!</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">A multi-skilled freelancer offering app development, automation, video, photo, and audio editing. Let's build something awesome together!</p>
+            
+            <!-- Enhanced CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="#about" class="px-8 py-4 bg-white text-blue-900 border border-white rounded-full font-semibold hover:bg-blue-50 hover:text-blue-900 transition transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-user mr-2"></i>Learn More
+                </a>
+                <a href="#contact" class="px-8 py-4 bg-white/10 text-white border border-white rounded-full font-semibold hover:bg-white/20 transition transform hover:scale-105 backdrop-blur-sm">
+                    <i class="fas fa-envelope mr-2"></i>Get In Touch
+                </a>
+            </div>
+            
+            <!-- Key Skills Highlight -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition">
+                    <i class="fas fa-video text-2xl text-white mb-2"></i>
+                    <h3 class="text-sm font-semibold">Video Editing</h3>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition">
+                    <i class="fas fa-camera text-2xl text-white mb-2"></i>
+                    <h3 class="text-sm font-semibold">Photo Editing</h3>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition">
+                    <i class="fas fa-music text-2xl text-white mb-2"></i>
+                    <h3 class="text-sm font-semibold">Audio & Music</h3>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition">
+                    <i class="fas fa-code text-2xl text-white mb-2"></i>
+                    <h3 class="text-sm font-semibold">Development</h3>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-10 fade-in">About Me</h2>
+            <div class="grid md:grid-cols-3 gap-10 items-center">
+                <div class="flex justify-center md:col-span-1 fade-in-left">
+                    <img src="images/profile.jpg" alt="AJ Radaza" class="w-52 h-52 rounded-full object-cover border-4 border-blue-100 shadow">
+                </div>
+                <div class="md:col-span-2 space-y-4 fade-in-right">
+                    <p>I'm AJ Radaza, a multi-talented creative and technical freelancer based in the Philippines.</p>
+                    <p>I've spent the last several years honing diverse skills that bridge both art and engineering. Whether I'm cutting together engaging short-form videos, polishing portraits, recording voiceovers, or coding up custom apps and automations, I bring precision, creativity, and passion to every project.</p>
+                    <p>I work with tools like DaVinci Resolve, Premiere Pro, Lightroom, Capture One, Studio One, Flutter, and Python to turn ideas into reality — fast.</p>
+                    <p>My approach is simple: understand your goals, create something remarkable, and deliver with excellence.</p>
+                    <p class="font-semibold">Let's build something great together.</p>
+                    <div class="bg-blue-50 border-l-4 border-blue-400 rounded p-4 mt-4">
+                        <p><strong>Email:</strong> ajayradaza@gmail.com</p>
+                        <p><strong>Location:</strong> Philippines (Remote-friendly)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-10 fade-in">My Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="pages/video-editing.html" class="bg-white rounded-lg shadow p-6 text-center group hover:bg-blue-50 transition cursor-pointer block fade-in">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" alt="Premiere Pro" class="mx-auto mb-2 w-12 h-12">
+                    <h3 class="font-bold text-xl mb-2 group-hover:text-blue-700 transition">Video Editing</h3>
+                    <p>Short-form and long-form content for social media, YouTube, and commercial use. Dynamic reels to polished interviews.</p>
+                </a>
+                <a href="pages/photo-editing.html" class="bg-white rounded-lg shadow p-6 text-center group hover:bg-blue-50 transition cursor-pointer block fade-in">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" class="mx-auto mb-2 w-12 h-12">
+                    <h3 class="font-bold text-xl mb-2 group-hover:text-blue-700 transition">Photo Editing</h3>
+                    <p>High-end photo retouching and color grading for portraits, events, and products. Natural touch-ups to cinematic looks.</p>
+                </a>
+                <a href="pages/audio-music.html" class="bg-white rounded-lg shadow p-6 text-center group hover:bg-blue-50 transition cursor-pointer block fade-in">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/audacity.svg" alt="Audacity" class="mx-auto mb-2 w-12 h-12">
+                    <h3 class="font-bold text-xl mb-2 group-hover:text-blue-700 transition">Voiceovers & Music</h3>
+                    <p>Voiceover recordings, singing, songwriting, and audio engineering. From podcasts to original music production.</p>
+                </a>
+                <a href="pages/web-development.html" class="bg-white rounded-lg shadow p-6 text-center group hover:bg-blue-50 transition cursor-pointer block fade-in">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="mx-auto mb-2 w-12 h-12">
+                    <h3 class="font-bold text-xl mb-2 group-hover:text-blue-700 transition">Web Development</h3>
+                    <p>Modern, responsive websites built with HTML5, CSS3, JavaScript, and Tailwind CSS. From landing pages to web applications.</p>
+                </a>
+                <a href="pages/app-development.html" class="bg-white rounded-lg shadow p-6 text-center group hover:bg-blue-50 transition cursor-pointer block fade-in">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="mx-auto mb-2 w-12 h-12">
+                    <h3 class="font-bold text-xl mb-2 group-hover:text-blue-700 transition">Mobile App Development</h3>
+                    <p>Android app development using Flutter and modern technologies. Custom solutions and specialized functionality.</p>
+                </a>
+                <a href="pages/python-automation.html" class="bg-white rounded-lg shadow p-6 text-center group hover:bg-blue-50 transition cursor-pointer block fade-in">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="mx-auto mb-2 w-12 h-12">
+                    <h3 class="font-bold text-xl mb-2 group-hover:text-blue-700 transition">Python Automation</h3>
+                    <p>Custom scripts that automate repetitive tasks, saving time and reducing errors. From data scraping to report generation.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-white">
+            <div class="max-w-5xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-blue-900 mb-10 fade-in">What Clients Say</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-blue-50 rounded-lg shadow p-6 fade-in">
+                        <p class="italic mb-4">"AJ narrated our explainer video perfectly!"</p>
+                        <div class="flex items-center gap-3">
+                            <img src="images/johnr.jpg" alt="Client photo" class="w-10 h-10 rounded-full object-cover bg-blue-200" />
+                            <div>
+                                <h4 class="font-semibold">John R.</h4>
+                                <span class="text-sm text-gray-600">Digital Marketing Assistant</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 rounded-lg shadow p-6 fade-in fade-in-delay-1">
+                        <p class="italic mb-4">"He did an amazing job and zero hassle on feedback I gave him."</p>
+                        <div class="flex items-center gap-3">
+                            <img src="images/benzhardy.jpg" alt="Client photo" class="w-10 h-10 rounded-full object-cover bg-blue-200" />
+                            <div>
+                                <h4 class="font-semibold">benzhardy</h4>
+                                <span class="text-sm text-gray-600">Fiverr Client</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 rounded-lg shadow p-6 fade-in fade-in-delay-2">
+                        <p class="italic mb-4">"Professional photo editing that exceeds expectations."</p>
+                        <div class="flex items-center gap-3">
+                            <img src="images/glayv.jpg" alt="Client photo" class="w-10 h-10 rounded-full object-cover bg-blue-200" />
+                            <div>
+                                <h4 class="font-semibold">Glay V.</h4>
+                                <span class="text-sm text-gray-600">Photographer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-900 text-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 fade-in">Get In Touch</h2>
+            <div class="flex justify-center">
+                <div class="max-w-lg w-full text-center fade-in fade-in-delay-1">
+                    <h3 class="font-bold text-xl mb-2">Let's Connect!</h3>
+                    <p class="mb-4">I'm always interested in hearing about new opportunities and exciting projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    <div class="flex flex-col gap-4 items-center justify-center mt-6">
+                        <a href="mailto:ajradaza@gmail.com" class="flex items-center w-64 px-5 py-4 bg-white/10 border border-white rounded-xl text-lg font-semibold hover:bg-white/20 transition fade-in-left">
+                            <svg class="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            Email Me
+                        </a>
+                        <a href="https://github.com/AJRadaza" target="_blank" rel="noopener noreferrer" class="flex items-center w-64 px-5 py-4 bg-white/10 border border-white rounded-xl text-lg font-semibold hover:bg-white/20 transition fade-in-left fade-in-delay-1">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-7 h-7 mr-3">
+                            GitHub
+                        </a>
+                        <a href="https://www.fiverr.com/ajradaza" target="_blank" rel="noopener noreferrer" class="flex items-center w-64 px-5 py-4 bg-white/10 border border-white rounded-xl text-lg font-semibold hover:bg-white/20 transition fade-in-left fade-in-delay-2">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/fiverr.svg" alt="Fiverr" class="w-7 h-7 mr-3 bg-white rounded-full p-1">
+                            Fiverr
+                        </a>
+                        <a href="https://www.linkedin.com/in/ajradaza/" target="_blank" rel="noopener noreferrer" class="flex items-center w-64 px-5 py-4 bg-white/10 border border-white rounded-xl text-lg font-semibold hover:bg-white/20 transition fade-in-left fade-in-delay-3">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="w-7 h-7 mr-3">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-white text-center py-6">
+        <div class="max-w-5xl mx-auto px-4">
+            <p>&copy; 2025 AJ Radaza. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

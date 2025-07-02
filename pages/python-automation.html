@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Automation - AJ Radaza</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full bg-white/20 backdrop-blur-md border-b border-white/10 z-40 shadow-lg transition-all duration-300">
+        <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+            <a href="../index.html" class="font-bold text-xl text-blue-900">AJ Radaza</a>
+            <ul class="hidden md:flex gap-8 font-medium" id="nav-links">
+                <li><a href="../index.html" class="hover:text-blue-500 transition">Home</a></li>
+                <li><a href="../index.html#about" class="hover:text-blue-500 transition">About</a></li>
+                <li class="relative">
+                    <button type="button" class="services-dropdown-toggle flex items-center hover:text-blue-500 transition focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                        Services <svg class="ml-1 w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="services-dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded shadow-lg hidden z-50">
+                        <a href="video-editing.html" class="block px-4 py-2 hover:bg-blue-50">Video Editing</a>
+                        <a href="photo-editing.html" class="block px-4 py-2 hover:bg-blue-50">Photo Editing</a>
+                        <a href="audio-music.html" class="block px-4 py-2 hover:bg-blue-50">Audio & Music</a>
+                        <a href="web-development.html" class="block px-4 py-2 hover:bg-blue-50">Web Development</a>
+                        <a href="app-development.html" class="block px-4 py-2 hover:bg-blue-50">App Development</a>
+                        <a href="python-automation.html" class="block px-4 py-2 hover:bg-blue-50">Python Automation</a>
+                    </div>
+                </li>
+                <li><a href="#portfolio" class="hover:text-blue-500 transition">Portfolio</a></li>
+                <li><a href="../index.html#contact" class="hover:text-blue-500 transition">Contact</a></li>
+            </ul>
+            <div class="md:hidden flex flex-col gap-1 cursor-pointer" id="hamburger">
+                <span class="block w-7 h-1 bg-blue-900 rounded"></span>
+                <span class="block w-7 h-1 bg-blue-900 rounded"></span>
+                <span class="block w-7 h-1 bg-blue-900 rounded"></span>
+            </div>
+        </div>
+        <ul class="md:hidden hidden flex-col gap-4 px-6 pb-4" id="mobile-menu">
+            <li><a href="../index.html" class="block py-2">Home</a></li>
+            <li><a href="../index.html#about" class="block py-2">About</a></li>
+            <li class="relative">
+                <button type="button" class="services-dropdown-toggle flex items-center w-full text-left py-2 focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                    Services <svg class="ml-1 w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="services-dropdown-menu hidden bg-white rounded shadow-lg mt-1 z-50">
+                    <a href="video-editing.html" class="block px-4 py-2 hover:bg-blue-50">Video Editing</a>
+                    <a href="photo-editing.html" class="block px-4 py-2 hover:bg-blue-50">Photo Editing</a>
+                    <a href="audio-music.html" class="block px-4 py-2 hover:bg-blue-50">Audio & Music</a>
+                    <a href="web-development.html" class="block px-4 py-2 hover:bg-blue-50">Web Development</a>
+                    <a href="app-development.html" class="block px-4 py-2 hover:bg-blue-50">App Development</a>
+                    <a href="python-automation.html" class="block px-4 py-2 hover:bg-blue-50">Python Automation</a>
+                </div>
+            </li>
+            <li><a href="#portfolio" class="block py-2">Portfolio</a></li>
+            <li><a href="../index.html#contact" class="block py-2">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero flex flex-col items-center justify-center min-h-screen pt-20 pb-16 bg-gradient-to-br from-blue-700 to-purple-900 text-white text-center relative overflow-hidden">
+        <canvas class="lava-lamp-bg absolute inset-0 w-full h-full z-0 pointer-events-none"></canvas>
+        
+        <!-- Main Hero Content -->
+        <div class="max-w-4xl mx-auto relative z-10 px-4">
+            <!-- Large Python Icon -->
+            <div class="mb-8">
+                <div class="inline-flex items-center justify-center w-32 h-32 bg-white/10 backdrop-blur-sm rounded-full border-4 border-white/20 shadow-2xl mb-6">
+                    <i class="fab fa-python text-5xl text-white drop-shadow-lg"></i>
+                </div>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg">Python Automation</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">I create custom Python scripts and automation tools that save you time and eliminate repetitive tasks. From data processing to web scraping, let Python handle the boring stuff while you focus on what matters.</p>
+            
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <i class="fas fa-robot text-2xl text-white mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Task Automation</h3>
+                    <p class="text-sm text-white/90">Automate repetitive workflows and processes</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <i class="fas fa-chart-bar text-2xl text-white mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Data Processing</h3>
+                    <p class="text-sm text-white/90">Clean, analyze, and transform your data</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <i class="fas fa-spider text-2xl text-white mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Web Scraping</h3>
+                    <p class="text-sm text-white/90">Extract data from websites automatically</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-10 fade-in">Automation Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 rounded-lg shadow p-6 text-center fade-in">
+                    <div class="text-4xl mb-4 text-blue-600"><i class="fas fa-chart-bar"></i></div>
+                    <h3 class="font-bold text-xl mb-2">Data Processing</h3>
+                    <p>Automate data cleaning, analysis, and reporting tasks with custom Python scripts.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg shadow p-6 text-center fade-in fade-in-delay-1">
+                    <div class="text-4xl mb-4 text-blue-600"><i class="fas fa-spider"></i></div>
+                    <h3 class="font-bold text-xl mb-2">Web Scraping</h3>
+                    <p>Extract data from websites automatically and organize it into useful formats.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg shadow p-6 text-center fade-in fade-in-delay-2">
+                    <div class="text-4xl mb-4 text-blue-600"><i class="fas fa-robot"></i></div>
+                    <h3 class="font-bold text-xl mb-2">Task Automation</h3>
+                    <p>Automate repetitive workflows, file management, and system administration tasks.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg shadow p-6 text-center fade-in">
+                    <div class="text-4xl mb-4 text-blue-600"><i class="fas fa-envelope-open-text"></i></div>
+                    <h3 class="font-bold text-xl mb-2">Email Automation</h3>
+                    <p>Automated email sending, filtering, and response systems for business communications.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg shadow p-6 text-center fade-in fade-in-delay-1">
+                    <div class="text-4xl mb-4 text-blue-600"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="font-bold text-xl mb-2">Report Generation</h3>
+                    <p>Automated report creation from databases and APIs with charts and visualizations.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg shadow p-6 text-center fade-in fade-in-delay-2">
+                    <div class="text-4xl mb-4 text-blue-600"><i class="fas fa-cogs"></i></div>
+                    <h3 class="font-bold text-xl mb-2">Custom Scripts</h3>
+                    <p>Tailored automation solutions for your specific business needs and workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Projects Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-10 fade-in">Python Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row gap-6 items-center fade-in">
+                    <div class="flex-shrink-0 flex items-center justify-center w-16 h-16">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-12 h-12 mx-auto" />
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">AMSChatBot</h3>
+                        <p class="mb-2">An automated Facebook Messenger chatbot for classroom attendance monitoring. Simplifies student check-ins and reduces manual attendance recording.</p>
+                        <div class="text-blue-500 text-sm mb-2 flex items-center gap-2">
+                            Python • Facebook API
+                        </div>
+                        <a href="https://github.com/AJRadaza/AMSChatBot" class="text-blue-600 hover:underline font-semibold" target="_blank" rel="noopener">View Script →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row gap-6 items-center fade-in fade-in-delay-1">
+                    <div class="flex-shrink-0 flex items-center justify-center w-16 h-16">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-12 h-12 mx-auto" />
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">WaifuWaifuMessenger</h3>
+                        <p class="mb-2">A playful Facebook Messenger bot that integrates with Waifu2x image upscaling API. Enhances and stylizes images sent via chat using AI-powered processing.</p>
+                        <div class="text-blue-500 text-sm mb-2">AI API • Image Processing • Messenger Bot</div>
+                        <a href="https://github.com/AJRadaza/WaifuWaifumessenger" class="text-blue-600 hover:underline font-semibold" target="_blank" rel="noopener">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-10 fade-in">Why Automate?</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-blue-50 rounded-lg shadow p-6 text-center fade-in">
+                    <div class="flex justify-center mb-2">
+                        <svg class="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="#1976D2"/>
+                            <path d="M24 14v10l6 6" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Save Time</h3>
+                    <p>Eliminate hours of manual work with automated processes that run 24/7.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg shadow p-6 text-center fade-in fade-in-delay-1">
+                    <div class="flex justify-center mb-2">
+                        <svg class="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="#388E3C"/>
+                            <path d="M24 34c5.523 0 10-4.477 10-10S29.523 14 24 14 14 18.477 14 24s4.477 10 10 10z" fill="#fff"/>
+                            <path d="M24 18v6l4 2" stroke="#388E3C" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Reduce Costs</h3>
+                    <p>Lower operational costs by automating repetitive tasks and reducing human error.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg shadow p-6 text-center fade-in fade-in-delay-2">
+                    <div class="flex justify-center mb-2">
+                        <svg class="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="#F9A825"/>
+                            <path d="M24 14v20M14 24h20" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Increase Accuracy</h3>
+                    <p>Automated processes eliminate human error and ensure consistent results.</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg shadow p-6 text-center fade-in fade-in-delay-3">
+                    <div class="flex justify-center mb-2">
+                        <svg class="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="#8E24AA"/>
+                            <path d="M24 14l10 10-10 10-10-10 10-10z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Scale Operations</h3>
+                    <p>Handle increased workload without proportional increases in manual effort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-900 text-white text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4 fade-in">Ready to Automate Your Workflow?</h2>
+            <p class="mb-6 fade-in fade-in-delay-1">Let's identify tasks that can be automated and build custom Python solutions for your business.</p>
+            <a href="../index.html#contact" class="px-8 py-3 bg-blue-500 rounded-full font-bold hover:bg-blue-600 transition fade-in fade-in-delay-2">Start Automating</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-white text-center py-6">
+        <div class="max-w-5xl mx-auto px-4">
+            <p>&copy; 2025 AJ Radaza. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

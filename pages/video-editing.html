@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editing - AJ Radaza</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full bg-white/20 backdrop-blur-md border-b border-white/10 z-40 shadow-lg transition-all duration-300">
+        <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+            <a href="../index.html" class="font-bold text-xl text-blue-900">AJ Radaza</a>
+            <ul class="hidden md:flex gap-8 font-medium" id="nav-links">
+                <li><a href="../index.html" class="hover:text-blue-500 transition">Home</a></li>
+                <li><a href="../index.html#about" class="hover:text-blue-500 transition">About</a></li>
+                <li class="relative">
+                    <button type="button" class="services-dropdown-toggle flex items-center hover:text-blue-500 transition focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                        Services <svg class="ml-1 w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="services-dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded shadow-lg hidden z-50">
+                        <a href="video-editing.html" class="block px-4 py-2 hover:bg-blue-50">Video Editing</a>
+                        <a href="photo-editing.html" class="block px-4 py-2 hover:bg-blue-50">Photo Editing</a>
+                        <a href="audio-music.html" class="block px-4 py-2 hover:bg-blue-50">Audio & Music</a>
+                        <a href="web-development.html" class="block px-4 py-2 hover:bg-blue-50">Web Development</a>
+                        <a href="app-development.html" class="block px-4 py-2 hover:bg-blue-50">App Development</a>
+                        <a href="python-automation.html" class="block px-4 py-2 hover:bg-blue-50">Python Automation</a>
+                    </div>
+                </li>
+                <li><a href="#portfolio" class="hover:text-blue-500 transition">Portfolio</a></li>
+                <li><a href="../index.html#contact" class="hover:text-blue-500 transition">Contact</a></li>
+            </ul>
+            <div class="md:hidden flex flex-col gap-1 cursor-pointer" id="hamburger">
+                <span class="block w-7 h-1 bg-blue-900 rounded"></span>
+                <span class="block w-7 h-1 bg-blue-900 rounded"></span>
+                <span class="block w-7 h-1 bg-blue-900 rounded"></span>
+            </div>
+        </div>
+        <ul class="md:hidden hidden flex-col gap-4 px-6 pb-4" id="mobile-menu">
+            <li><a href="../index.html" class="block py-2">Home</a></li>
+            <li><a href="../index.html#about" class="block py-2">About</a></li>
+            <li class="relative">
+                <button type="button" class="services-dropdown-toggle flex items-center w-full text-left py-2 focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                    Services <svg class="ml-1 w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="services-dropdown-menu hidden bg-white rounded shadow-lg mt-1 z-50">
+                    <a href="video-editing.html" class="block px-4 py-2 hover:bg-blue-50">Video Editing</a>
+                    <a href="photo-editing.html" class="block px-4 py-2 hover:bg-blue-50">Photo Editing</a>
+                    <a href="audio-music.html" class="block px-4 py-2 hover:bg-blue-50">Audio & Music</a>
+                    <a href="web-development.html" class="block px-4 py-2 hover:bg-blue-50">Web Development</a>
+                    <a href="app-development.html" class="block px-4 py-2 hover:bg-blue-50">App Development</a>
+                    <a href="python-automation.html" class="block px-4 py-2 hover:bg-blue-50">Python Automation</a>
+                </div>
+            </li>
+            <li><a href="#portfolio" class="block py-2">Portfolio</a></li>
+            <li><a href="../index.html#contact" class="block py-2">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex flex-col items-center justify-center min-h-screen pt-20 pb-16 bg-gradient-to-br from-blue-700 to-purple-900 text-white text-center relative overflow-hidden">
+        <canvas class="lava-lamp-bg absolute inset-0 w-full h-full z-0 pointer-events-none"></canvas>
+        
+        <!-- Main Hero Content -->
+        <div class="max-w-4xl mx-auto relative z-10 px-4">
+            <!-- Large Video Icon -->
+            <div class="mb-8">
+                <div class="inline-flex items-center justify-center w-32 h-32 bg-white/10 backdrop-blur-sm rounded-full border-4 border-white/20 shadow-2xl mb-6">
+                    <i class="fas fa-play text-5xl text-white drop-shadow-lg"></i>
+                </div>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg">Video Editing</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">Professional video editing for YouTube, social media, and business. I use Adobe Premiere Pro and DaVinci Resolve to deliver polished, engaging videos.</p>
+            
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <i class="fas fa-video text-2xl text-white mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">YouTube Content</h3>
+                    <p class="text-sm text-white/90">Engaging videos optimized for YouTube success</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <i class="fas fa-share-alt text-2xl text-white mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Social Media</h3>
+                    <p class="text-sm text-white/90">Short-form content for Instagram, TikTok, and more</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <i class="fas fa-briefcase text-2xl text-white mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Business Videos</h3>
+                    <p class="text-sm text-white/90">Professional corporate and promotional content</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-10 fade-in">Video Editing Services</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 rounded-lg shadow p-6 fade-in fade-in-left">
+                    <h3 class="font-bold text-xl mb-2"><i class="fas fa-wrench text-blue-600 mr-2"></i>Tools & Software</h3>
+                    <ul class="list-disc list-inside text-left ml-4">
+                        <li>DaVinci Resolve</li>
+                        <li>Adobe Premiere Pro</li>
+                        <li>Adobe After Effects</li>
+                        <li>CapCut</li>
+                    </ul>
+                </div>
+                <div class="bg-blue-50 rounded-lg shadow p-6 fade-in fade-in-right">
+                    <h3 class="font-bold text-xl mb-2"><i class="fas fa-video text-blue-600 mr-2"></i>Video Styles</h3>
+                    <ul class="list-disc list-inside text-left ml-4">
+                        <li>Promotional Videos</li>
+                        <li>Educational Content</li>
+                        <li>Music Videos</li>
+                        <li>Corporate Videos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-16">Video Portfolio</h2>
+            
+        <!-- Informational Videos -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-blue-800 mb-8 text-center">Informational Videos</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="aspect-video bg-gray-200 flex items-center justify-center relative">
+                            <!-- Lazy Vimeo Embed -->
+                            <div class="w-full h-full relative video-placeholder cursor-pointer" data-vimeo-id="1097815739">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center loading-placeholder">
+                                    <div class="text-center text-white">
+                                        <svg class="w-20 h-20 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                        <p class="text-sm font-medium">Loading...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-lg mb-2">Jeff Bezos vs. Elon Musk</h4>
+                            <p class="text-gray-600">A thought-provoking analysis of the contrasting leadership styles and business strategies of two tech giants.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="aspect-video bg-gray-200 flex items-center justify-center relative">
+                            <!-- Lazy Vimeo Embed -->
+                            <div class="w-full h-full relative video-placeholder cursor-pointer" data-vimeo-id="1097815707">
+                                <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-blue-600 flex items-center justify-center loading-placeholder">
+                                    <div class="text-center text-white">
+                                        <svg class="w-20 h-20 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                        <p class="text-sm font-medium">Loading...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-lg mb-2">Philippine Endemic Species</h4>
+                            <p class="text-gray-600">A captivating documentary showcasing the unique fauna of the Philippines, highlighting conservation efforts and biodiversity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promotional Videos -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-blue-800 mb-8 text-center">Promotional Videos</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="aspect-video bg-gray-200 flex items-center justify-center relative">
+                            <!-- Lazy Vimeo Embed -->
+                            <div class="w-full h-full relative video-placeholder cursor-pointer" data-vimeo-id="1097815874">
+                                <div class="absolute inset-0 bg-gradient-to-br from-pink-600 to-rose-600 flex items-center justify-center loading-placeholder">
+                                    <div class="text-center text-white">
+                                        <svg class="w-20 h-20 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                        <p class="text-sm font-medium">Loading...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-lg mb-2">Period Cramps Device Showcase</h4>
+                            <p class="text-gray-600">Engaging promo highlighting a wearable device that relieves period cramps, featuring clear visuals and concise messaging for women’s wellness.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="aspect-video bg-gray-200 flex items-center justify-center relative">
+                            <!-- Lazy Vimeo Embed -->
+                            <div class="w-full h-full relative video-placeholder cursor-pointer" data-vimeo-id="1097852561">
+                                <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center loading-placeholder">
+                                    <div class="text-center text-white">
+                                        <svg class="w-20 h-20 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                        <p class="text-sm font-medium">Loading...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-lg mb-2">Bloat Pill Showcase</h4>
+                            <p class="text-gray-600">Sleek product demonstration and compelling call-to-action sequences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Educational Content -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-blue-800 mb-8 text-center">Educational Content</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="aspect-video bg-gray-200 flex items-center justify-center relative">
+                            <!-- Lazy Vimeo Embed -->
+                            <div class="w-full h-full relative video-placeholder cursor-pointer" data-vimeo-id="1097815653">
+                                <div class="absolute inset-0 bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center loading-placeholder">
+                                    <div class="text-center text-white">
+                                        <svg class="w-20 h-20 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                        <p class="text-sm font-medium">Loading...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-lg mb-2">Nuclear Educational Video</h4>
+                            <p class="text-gray-600">Informative video simplifying nuclear energy concepts with clear visuals, engaging narration, and easy-to-understand graphics for all audiences.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="aspect-video bg-gray-200 flex items-center justify-center relative">
+                            <!-- Lazy Vimeo Embed -->
+                            <div class="w-full h-full relative video-placeholder cursor-pointer" data-vimeo-id="1097815575">
+                                <div class="absolute inset-0 bg-gradient-to-br from-teal-600 to-cyan-600 flex items-center justify-center loading-placeholder">
+                                    <div class="text-center text-white">
+                                        <svg class="w-20 h-20 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                        <p class="text-sm font-medium">Loading...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-lg mb-2">Interview about Peace and War</h4>
+                            <p class="text-gray-600">Thought-provoking interview exploring perspectives on peace, conflict, and the impact of war, featuring insightful commentary and balanced discussion for educational purposes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Music Videos -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-blue-800 mb-8 text-center">Music Videos</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="aspect-video bg-gray-200 flex items-center justify-center relative">
+                            <!-- Lazy Vimeo Embed -->
+                            <div class="w-full h-full relative video-placeholder cursor-pointer" data-vimeo-id="1097815798">
+                                <div class="absolute inset-0 bg-gradient-to-br from-rose-600 to-pink-600 flex items-center justify-center loading-placeholder">
+                                    <div class="text-center text-white">
+                                        <svg class="w-20 h-20 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                        <p class="text-sm font-medium">Loading...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-lg mb-2">Pre-Wedding Video</h4>
+                            <p class="text-gray-600">Romantic and cinematic pre-wedding video capturing the love story of the couple through beautiful visuals and heartfelt moments.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="aspect-video bg-gray-200 flex items-center justify-center relative">
+                            <!-- Lazy Vimeo Embed -->
+                            <div class="w-full h-full relative video-placeholder cursor-pointer" data-vimeo-id="1097856999">
+                                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center loading-placeholder">
+                                    <div class="text-center text-white">
+                                        <svg class="w-20 h-20 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                        <p class="text-sm font-medium">Loading...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-lg mb-2">Short Music Video</h4>
+                            <p class="text-gray-600">A brief and engaging music video featuring the ocean, designed to leave a lasting impression.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-900 text-white text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4 fade-in">Ready to Create Amazing Videos?</h2>
+            <p class="mb-6 fade-in fade-in-delay-1">Let's bring your vision to life with professional video editing that captivates your audience.</p>
+            <a href="../index.html#contact" class="px-8 py-3 bg-blue-500 rounded-full font-bold hover:bg-blue-600 transition fade-in fade-in-delay-2">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-white text-center py-6">
+        <div class="max-w-5xl mx-auto px-4">
+            <p>&copy; 2025 AJ Radaza. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
